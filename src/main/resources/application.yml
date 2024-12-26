@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: data-generator
+
+  config:
+    import: optional:file:.env[.properties]
+
+server:
+  port: 8081
+grpc:
+  client:
+    GLOBAL:
+      address: ${GRPC_HOST}:${GRPC_PORT}
+      negotiation-type: plaintext
+
+push:
+  batch-size: ${BATCH_SIZE:100}
