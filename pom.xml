@@ -12,7 +12,7 @@
     <artifactId>data-generator</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>data-generator</name>
-    <description>data-generator</description>
+    <description>data-generator client with gRPC</description>
     <url/>
     <licenses>
         <license/>
@@ -36,7 +36,7 @@
         <protobuf.version>3.25.1</protobuf.version>
         <protobuf-plugin.version>0.6.1</protobuf-plugin.version>
         <grpc.version>1.60.0</grpc.version>
-        <os-maven-plugin.version>1.7.0</os-maven-plugin.version>
+        <os-maven-plugin.version>1.7.1</os-maven-plugin.version>
     </properties>
 
     <dependencies>
