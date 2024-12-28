@@ -1,4 +1,4 @@
-package org.example.grpc.datagenerator;
+package org.example.grpc.client;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

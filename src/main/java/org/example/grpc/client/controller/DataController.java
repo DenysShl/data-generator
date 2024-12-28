@@ -1,14 +1,14 @@
-package org.example.grpc.datagenerator.controller;
+package org.example.grpc.client.controller;
 
 import lombok.RequiredArgsConstructor;
-import org.example.grpc.datagenerator.dto.DataDto;
-import org.example.grpc.datagenerator.dto.DataTestOptionsDto;
-import org.example.grpc.datagenerator.mapper.DataMapper;
-import org.example.grpc.datagenerator.mapper.DataTestOptionsMapper;
-import org.example.grpc.datagenerator.model.Data;
-import org.example.grpc.datagenerator.service.GRPCDataService;
-import org.example.grpc.datagenerator.service.TestDataService;
-import org.example.grpc.datagenerator.test.DataTestOptions;
+import org.example.grpc.client.dto.DataDto;
+import org.example.grpc.client.dto.DataTestOptionsDto;
+import org.example.grpc.client.mapper.DataMapper;
+import org.example.grpc.client.mapper.DataTestOptionsMapper;
+import org.example.grpc.client.model.Data;
+import org.example.grpc.client.service.GRPCDataService;
+import org.example.grpc.client.service.TestDataService;
+import org.example.grpc.client.test.DataTestOptions;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

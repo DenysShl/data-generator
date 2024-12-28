@@ -1,10 +1,10 @@
-package org.example.grpc.datagenerator.service.impl;
+package org.example.grpc.client.service.impl;
 
 import lombok.RequiredArgsConstructor;
-import org.example.grpc.datagenerator.model.Data;
-import org.example.grpc.datagenerator.service.GRPCDataService;
-import org.example.grpc.datagenerator.service.TestDataService;
-import org.example.grpc.datagenerator.test.DataTestOptions;
+import org.example.grpc.client.model.Data;
+import org.example.grpc.client.service.GRPCDataService;
+import org.example.grpc.client.service.TestDataService;
+import org.example.grpc.client.test.DataTestOptions;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -40,9 +40,7 @@ public class TestDataServiceImpl implements TestDataService {
                         data.setMeasurementType(
                                 getRandomMesurementType(testOptions.getMeasurementTypes())
                         );
-                        data.setTmestamp(
-                                LocalDateTime.now()
-                        );
+                        data.setTimestamp(LocalDateTime.now());
                         dataBatch.add(data);
                         if (dataBatch.size() == batchSize) {
                             grpcDataService.send(dataBatch);

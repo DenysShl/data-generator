@@ -1,6 +1,6 @@
-package org.example.grpc.datagenerator.service;
+package org.example.grpc.client.service;
 
-import org.example.grpc.datagenerator.model.Data;
+import org.example.grpc.client.model.Data;
 
 import java.util.List;
 

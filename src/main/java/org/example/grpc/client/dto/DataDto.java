@@ -1,10 +1,10 @@
-package org.example.grpc.datagenerator.dto;
+package org.example.grpc.client.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import org.example.grpc.datagenerator.model.Data;
+import org.example.grpc.client.model.Data;
 
 import java.time.LocalDateTime;
 

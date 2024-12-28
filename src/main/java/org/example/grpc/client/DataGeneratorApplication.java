@@ -1,4 +1,4 @@
-package org.example.grpc.datagenerator;
+package org.example.grpc.client;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

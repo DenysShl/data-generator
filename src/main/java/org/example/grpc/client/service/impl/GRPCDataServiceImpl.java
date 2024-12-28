@@ -1,4 +1,4 @@
-package org.example.grpc.datagenerator.service.impl;
+package org.example.grpc.client.service.impl;
 
 import com.google.protobuf.Empty;
 import com.google.protobuf.Timestamp;
@@ -7,11 +7,10 @@ import grpc.common.GRPCData;
 import io.grpc.stub.StreamObserver;
 import lombok.RequiredArgsConstructor;
 import net.devh.boot.grpc.client.inject.GrpcClient;
-import org.example.grpc.datagenerator.model.Data;
-import org.example.grpc.datagenerator.service.GRPCDataService;
+import org.example.grpc.client.model.Data;
+import org.example.grpc.client.service.GRPCDataService;
 import org.springframework.stereotype.Service;
 
-import java.time.ZoneOffset;
 import java.util.List;
 
 @Service
@@ -29,7 +28,8 @@ public class GRPCDataServiceImpl implements GRPCDataService {
                 .setSensorId(data.getSensorId())
                 .setTimestamp(
                         Timestamp.newBuilder()
-                                .setSeconds(data.getTmestamp().toEpochSecond(ZoneOffset.UTC))
+                                .setSeconds(data.getTimestamp().getSecond())
+                                .setNanos(data.getTimestamp().getNano())
                                 .build()
                 )
                 .setMeasurementType(
@@ -83,7 +83,8 @@ public class GRPCDataServiceImpl implements GRPCDataService {
                     .setSensorId(data.getSensorId())
                     .setTimestamp(
                             Timestamp.newBuilder()
-                                    .setSeconds(data.getTmestamp().toEpochSecond(ZoneOffset.UTC))
+                                    .setSeconds(data.getTimestamp().getSecond())
+                                    .setNanos(data.getTimestamp().getNano())
                                     .build()
                     )
                     .setMeasurementType(

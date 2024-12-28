@@ -1,4 +1,4 @@
-package org.example.grpc.datagenerator.mapper;
+package org.example.grpc.client.mapper;
 
 import java.util.List;
 
